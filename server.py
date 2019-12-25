@@ -4,7 +4,7 @@ from bottle import Bottle
 
 
 def home_page():
-    return "Assignment 2"
+    return "Assignment 2 Hello World"
 
 
 def create_app():

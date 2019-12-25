@@ -1,0 +1,22 @@
+*{
+    padding: 0px;
+}
+#showcase{
+    display: flex;
+    background: url(../img/sky.jpg) no-repeat;
+    background-size: 100% 100%;
+    min-height:400px;
+    text-align:center;
+    color :black;
+    font-weight: bolder;
+}
+#showcase h1{
+    font-size: 80px;
+    margin: auto;
+}
+#showcase .avatar{
+    height: 25vh;
+    border-radius: 50%;
+    border: #a30f65 3px solid;
+    margin: auto;
+}
