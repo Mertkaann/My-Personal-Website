@@ -3,7 +3,7 @@ body{
     background: #ccc;
 }
 body {
-  background: #ccc;
+    background: #ccc;
 
 }
 .logo-container,.nav-links,header{
@@ -20,15 +20,15 @@ header{
     border-bottom:   #e8491d 5px solid;
 }
 .btn {
-  background: black;
-  color: white;
-  padding: 0.6rem 1.3rem;
-  text-decoration: none;
-  border: 0;
+    background: black;
+    color: white;
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
 }
 .btn:hover {
-  background: #C3A9FF;
-  color: black;
+    background: #C3A9FF;
+    color: black;
 }
 .logo-container{
     flex: 1;
@@ -101,10 +101,10 @@ nav{
     color: #e8491d;
 }
 .chapter{
-text-decoration: none;
-color: black;
-margin-left: 10px;
-font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+    font-size: 20px;
     font-weight: 400;
 }
 /*footer*/
@@ -113,19 +113,19 @@ footer {
     background: rgba(23, 23, 23, 0.9);
 }
 footer #boxes{
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 footer h5{
     text-align: center;
     color: white;
 }
 .box {
-  background: #ddd;
-  text-align: center;
-  padding: 1.5rem 2rem;
-  box-shadow:  0 10px 20px rgba(104, 104, 104, 0.8);
+    background: #ddd;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow:  0 10px 20px rgba(104, 104, 104, 0.8);
 }
 .box img{
     height: 9vh;
@@ -137,12 +137,12 @@ footer h3{
     text-align: center;
 }
 .info {
-  background: #ddd;
-  box-shadow:  0 10px 20px rgba(104, 104, 104, 0.8);
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 3rem;
+    background: #ddd;
+    box-shadow:  0 10px 20px rgba(104, 104, 104, 0.8);
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
 }
 .info p{
     font-size: 1.5rem;
