@@ -35,24 +35,22 @@
     </header>
     {{ !table_html }}
     {{ !output }}
-
-</body>
-<fieldset>
     <form action="/form" method="post">
-        <legend>Did You Like This website?</legend>
-        <input type="radio" name="Yes" value="True"> Yes i dit.<br>
-        <input type="radio" name="No" value="True"> No i did not its crap.<br>
-        <legend>You Can Select More Than One</legend>
-        <legend>Reset FORM</legend>
-        <ul>
-            <li>Password: <input name="password" type="password" /></li>
-        </ul>
+        <fieldset>
+            <p>Did You Like This website? You Can Select More Than One</p>
+            <input type="radio" name="Yes" value="True"> Yes i dit.<br>
+            <input type="radio" name="No" value="True"> No i did not its crap.<br>
+            <ul>
+                <li>Password: <input name="password" type="password" /></li>
+            </ul>
 
-        <input value="Send" type="submit" />
-
+            <input value="Send" type="submit" />
+        </fieldset>
 
     </form>
+</body>
 
-</fieldset>
+
+
 
 </html>
