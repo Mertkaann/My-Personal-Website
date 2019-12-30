@@ -64,10 +64,6 @@ def gettable():
     df = pd.DataFrame(list(zip(data.keys(),data.values())),columns = ["IP Address","Count"])
     return df
 
-def printIPs():
-    for ip in Ip_list:
-        print("IP : {}Count: {}".format(ip, Ip_list[ip]))
-
 def loadIPs():
     with open("IPadresses.txt", "r") as f:
         line = f.readline()
@@ -81,8 +77,8 @@ def loadIPs():
             line = f.readline()
 def saveIPs():
     loadIPs()
-    for ip1 in new_list:
-        total_list[ip1] += new_list[ip1]
+    for ip in new_list:
+        total_list[ip] += new_list[ip]
 
     with open("IPadresses.txt", "w") as f:
         for ip in total_list:

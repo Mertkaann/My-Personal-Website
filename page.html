@@ -5,24 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Table TEMP</title>
+    <link type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="static/css/header.css">
+    <link type="text/css" rel="stylesheet" href="static/css/style-page.css">
+    <title>Ip Page</title>
 </head>
 
-<body>
-    {{ !table_html }}
-    {{ !output }}
-    <a href="index.html" class="btn">Home Page</a>
 
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="static/img/logo.png" alt=" logo" />
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="current"><a href="page.html" class="nav-link">Ip Table</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="extras.html" class="nav-link">Extras</a></li>
+                <li>
+                    <ul class="nested-nav-links">
+                        <li>Contact</li>
+                        <li><a href="https://www.linkedin.com/in/mert-kaan-g%C3%BCl-24b081192/"
+                                class="nested-nav-link">Linked-in</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    {{ !table_html }}
+
+    {{ !output }}
 </body>
-<form action="/form" method="post">
-    <fieldset>
+<fieldset>
+    <form action="/form" method="post">
+
         <legend>Reset FORM</legend>
         <ul>
             <li>Password: <input name="password" type="password" /></li>
         </ul>
         <input value="Reset IPs" type="submit" />
-    </fieldset>
-</form>
 
+
+    </form>
+
+</fieldset>
 
 </html>
