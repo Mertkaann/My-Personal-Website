@@ -46,12 +46,19 @@ def table():
 @route('/form', method='POST')
 def resetIPs():
     pw = request.forms.get('password')
+    answer1 = request.forms.get('Yes')
+    answer2 = request.forms.get('No')
+    print("#"*100,answer1,answer2,"#"*100)
     pw_confirmation = create_hash(pw)
+    output = ""
+    if answer1 == "True" or answer2 == "True":
+        print("&"*100)
+        output = "<p>Review Sent Succesfully</p>"
     if pw_hash == pw_confirmation:
         saveIPs()
-        return '<p>Your login information was correct.</p><a href="page.html" class="btn">Reset Page</a>'
+        return output + '<p>Your login information was correct.</p><a href="page.html" class="btn">Reset Page</a>'
     else:
-        return '<p>Login failed.</p><a href="page.html" class="btn">Reset Page</a>'
+        return output +'<p>Login failed.</p><a href="page.html" class="btn">Reset Page</a>'
 def gettable():
     data = defaultdict(int)
     for ip in total_list:
