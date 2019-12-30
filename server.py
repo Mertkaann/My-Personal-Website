@@ -74,7 +74,10 @@ def loadIPs():
         
         while line:
             ip,count = line.split(' ')
-            total_list[ip] = int(count)
+            try:
+                total_list[ip] = int(count)
+            except Exception as e: 
+                print(e)
             line = f.readline()
 def saveIPs():
     loadIPs()
