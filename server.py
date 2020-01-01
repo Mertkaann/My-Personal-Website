@@ -92,7 +92,7 @@ def gettable():
             '''.format(i,keys,values)
         
     table += '''
-        </body>
+        </tbody>
     </table>
             '''
     print(table)
