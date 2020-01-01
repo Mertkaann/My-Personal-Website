@@ -36,12 +36,13 @@ def send_static(filename):
 def table():
     
     client_ip = request.environ.get('HTTP_X_FORWARDED_FOR') or request.environ.get('REMOTE_ADDR')
-    output = '\n\nYour IP is: {}\n'.format(client_ip)
+    output = 'Your IP is: {}'.format(client_ip)
     new_list[client_ip] += 1
 
     df = gettable()
-    df_html = df.to_html()
-    return template('page',table_html=df_html,output=output)
+    #df_html = df.to_html()
+    #return template('page',table_html=df_html,output=output)
+    return template('page',table_html=df,output=output)
 
 @route('/form', method='POST')
 def resetIPs():
@@ -68,8 +69,35 @@ def gettable():
         if ip not in total_list.keys():
             data[ip] = new_list[ip]
     
-    df = pd.DataFrame(list(zip(data.keys(),data.values())),columns = ["IP Address","Count"])
-    return df
+    #df = pd.DataFrame(list(zip(data.keys(),data.values())),columns = ["IP Address","Count"])
+    table = '''
+    <table>
+        <thead>
+            <tr style="text-align: right;">
+                <th></th>
+                <th>IP Address</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            '''
+
+    for i, (keys,values) in enumerate(zip(data.keys(),data.values())):
+            table += '''
+            <tr>
+                <th>{}</th>
+                <td>{}</td>
+                <td>{}</td>
+            </tr>
+            '''.format(i,keys,values)
+        
+    table += '''
+        </body>
+    </table>
+            '''
+    print(table)
+    #return df
+    return table
 
 def loadIPs():
     with open("IPadresses.txt", "r") as f:
