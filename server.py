@@ -2,7 +2,6 @@ import os
 
 from bottle import Bottle, route, run, static_file, request,SimpleTemplate,template
 from pathlib import Path
-import pandas as pd
 from collections import defaultdict
 from repl_comments import create_hash,get_pwhash
 
@@ -40,8 +39,6 @@ def table():
     new_list[client_ip] += 1
 
     df = gettable()
-    #df_html = df.to_html()
-    #return template('page',table_html=df_html,output=output)
     return template('page',table_html=df,output=output)
 
 @route('/form', method='POST')
@@ -69,7 +66,6 @@ def gettable():
         if ip not in total_list.keys():
             data[ip] = new_list[ip]
     
-    #df = pd.DataFrame(list(zip(data.keys(),data.values())),columns = ["IP Address","Count"])
     table = '''
     <table>
         <thead>
@@ -95,8 +91,6 @@ def gettable():
         </tbody>
     </table>
             '''
-    print(table)
-    #return df
     return table
 
 def loadIPs():
