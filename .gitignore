@@ -1,1 +1,3 @@
-*.abc
+.vscode
+__pycache__
+IPadresses.txt

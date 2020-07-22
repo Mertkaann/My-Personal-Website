@@ -10,7 +10,6 @@ pw_hash = get_pwhash()
 total_list = defaultdict(int)
 new_list = defaultdict(int)
 
-print("INFO ", os.curdir, PATH)
 
 
 @route('/')
