@@ -11,7 +11,6 @@ total_list = defaultdict(int)
 new_list = defaultdict(int)
 
 
-
 @route('/')
 @route('/index.html')
 def home_page():
