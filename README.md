@@ -1,1 +1,1 @@
-You can visit me at https://mertkaann-website.herokuapp.com/
+You can visit me at https://mertkaann.herokuapp.com/
