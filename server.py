@@ -101,7 +101,7 @@ def gettable():
 
 
 def loadIPs():
-    with open(os.path.join(os.curdir, "IPadresses.txt"), "r") as f:
+    with open(os.path.join(PATH, "IPadresses.txt"), "r") as f:
         line = f.readline()
 
         while line:
@@ -118,7 +118,7 @@ def saveIPs():
     for ip in new_list:
         total_list[ip] += new_list[ip]
 
-    with open(os.path.join(os.curdir, "IPadresses.txt"), "w") as f:
+    with open(os.path.join(PATH, "IPadresses.txt"), "w") as f:
         for ip in total_list:
             f.write(ip + ' ' + str(total_list[ip]) + '\n')
     total_list.clear()
